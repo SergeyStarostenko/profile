@@ -10,7 +10,7 @@
 		$user = $_SESSION['login'];
 	}
 	if($user == ''){
-		header('Refresh: 4; URL=http://profile/form.php');
+		header('Refresh: 4; URL=http://profile/www/form.php');
 		echo "<h2>Время сессии истекло<br>Через 4сек вы будите переведены на форму регистрации/входа</h2>";
 		exit;
 	}

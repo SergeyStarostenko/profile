@@ -6,7 +6,7 @@
 		if (array_key_exists($login_in_f, $base_login)) {;
 			if ($base_login[$login_in_f] === $password_in_f) {
 				setcookie('login', "$login_in_f", time()+120);
-				header('Refresh: 4; URL=http://profile/profile.php');
+				header('Refresh: 4; URL=http://profile/www/profile.php');
 				echo "<h2>Вы вошли в систему как - ".$login_in_f."<br/>Сейчас вы увидите Ваш профиль!</h2>";
   				exit;
 			}else{

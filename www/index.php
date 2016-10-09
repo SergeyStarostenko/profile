@@ -44,8 +44,8 @@
 		if (checking_form($login, $password, $name, $ferstname, $email) == 1) {
 			registration($login, $password, $name, $ferstname, $email, $sex, $sex_logo);
 		}else{
-			header('Refresh: 2; URL=http://profile/form.php');
-			echo "<h2>Извините, данные не прошли проверку!<br>Через 5сек вы будите переведены на форму входа/регистрации</h2>";
+			header('Refresh: 2; URL=http://profile/www/form.php');
+			echo "<h2>Извините, данные не прошли проверку!<br>Через 2сек вы будите переведены на форму входа/регистрации</h2>";
   			exit;
 		}
 	}
@@ -54,8 +54,8 @@
 		session_start();
 		unset($_SESSION['sessin_data']);
 		session_destroy();
-		header('Refresh: 2; URL=http://profile/form.php');
-			echo "<h2>Вы выходите из профиля!<br>Через 5сек вы будите переведены на форму входа/регистрации</h2>";
+		header('Refresh: 2; URL=http://profile/www/form.php');
+			echo "<h2>Вы выходите из профиля!<br>Через 2сек вы будите переведены на форму входа/регистрации</h2>";
   		exit;
 	}
 

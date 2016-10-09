@@ -10,12 +10,12 @@
 				echo "<h2>Вы вошли в систему как - ".$login_in_f."<br/>Сейчас вы увидите Ваш профиль!</h2>";
   				exit;
 			}else{
-				header('Refresh: 5; URL=http://profile/form.php');
+				header('Refresh: 5; URL=http://profile/www/form.php');
 				echo "<h2>Не правильно написан пароль. Попробуйте заново!<br/>Через 5сек вы будите переведены на форму авторизации</h2>";
   				exit;
 			}
 		}else{
-			header('Refresh: 5; URL=http://profile/form.php');
+			header('Refresh: 5; URL=http://profile/www/form.php');
 			echo "<h2>Не найден пользователь по Логину. Зарегистрируйтесь!<br>Через 5сек вы будите переведены на форму регистрации</h2>";
   			exit;
 		}
@@ -38,16 +38,16 @@
 				session_start();
 				$_SESSION['login'] = $login_f;
 				$_SESSION['sessin_data'] = $sessin_data;
-				header('Refresh: 5; URL=http://profile/profile.php');
+				header('Refresh: 5; URL=http://profile/www/profile.php');
 				echo "<h2>Вы вошли в систему как - ".$login_f."<br/>Сейчас вы увидите Ваш профиль!</h2>";
   				exit;
 			}else{
-				header('Refresh: 5; URL=http://profile/form.php');
+				header('Refresh: 5; URL=http://profile/www/form.php');
 				echo "<h2>Такой Логин уже существует! Пожалуйста, поменяйте его<br>Через 5сек вы будите переведены на форму регистрации</h2>";
   				exit;
 			}
 		}else{
-			header('Refresh: 5; URL=http://profile/form.php');
+			header('Refresh: 5; URL=http://profile/www/form.php');
 			echo "<h2>Заполните все поля регистрации!<br>Через 5сек вы будите переведены на форму регистрации</h2>";
   			exit;
 		}
@@ -65,7 +65,7 @@
 
 	function checking_form($login_ch, $password_ch, $name_ch, $ferstname_ch, $email_ch){
 		if ($login_ch === $password_ch) {
-			header('Refresh: 3; URL=http://profile/form.php');
+			header('Refresh: 3; URL=http://profile/www/form.php');
 			echo "<h2>Логин и Пароль не совпадают! Пожалуйста измените данные!<br>Через 3сек вы будите переведены на форму входа/регистрации</h2>";
   			exit;
 		}
